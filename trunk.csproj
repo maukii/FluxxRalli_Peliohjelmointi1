@@ -93,7 +93,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\ResetButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\MAUNON TIEDOSTO.txt" />
