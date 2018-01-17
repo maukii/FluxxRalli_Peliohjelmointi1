@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23327828804277504}
   - component: {fileID: 114881708810918628}
   m_Layer: 0
-  m_Name: GameruleObject
+  m_Name: GameruleChanger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
