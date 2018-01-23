@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class GameruleChanger : MonoBehaviour
 {
-
+    public Animation Gamerule_Pickup;
     //jos aktivoituu, jokin satunnainen Gamerule muuttuu
     void OnTriggerEnter(Collider other)
     {
 
         if (other.tag == "Player")
         {
+
+
             Debug.Log("Gamerule changed");
+            Gamerule_Pickup.Play();
 
         }
 
-
-        List<string> GRList = new List<string>();
-        string[] GRArray = new string[5];
-
+        
+       // List<string> gameruleList = new List<string>();
+       // string[] gameruleArray = new string[5];
+       //
         // void RandomGR()
         //     {
         //     return new ("Placement", "Items", "Coins", "Clear", "Speed");
@@ -31,7 +34,7 @@ public class GameruleChanger : MonoBehaviour
         //             break;
         //         case Items:
         //             Debug.Log("The color is green");
-        //             break;
+        //             break;.
         //         case Coins:
         //             Debug.Log("The color is blue");
         //             break;
@@ -51,6 +54,9 @@ public class GameruleChanger : MonoBehaviour
 
 
     }
-
+    public void die()
+    {
+        Destroy(this.gameObject);
+    }
 
 }
