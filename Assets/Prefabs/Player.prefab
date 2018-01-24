@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 33342982965454542}
   - component: {fileID: 65960787982500750}
   - component: {fileID: 23464208934734854}
-  - component: {fileID: 114793189097807412}
   - component: {fileID: 114568345538621814}
   - component: {fileID: 114751988950110704}
   - component: {fileID: 54761799579255860}
+  - component: {fileID: 114799345354817080}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1579284462076690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0093098, y: -0.5, z: -3.7209933}
+  m_LocalPosition: {x: 1062.6146, y: 900.2987, z: -1842.5089}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,7 +98,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!65 &65960787982500750
 BoxCollider:
@@ -126,22 +126,22 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 78
-    i1: 72
-    i2: 218
-    i3: 186
-    i4: 147
-    i5: 151
-    i6: 141
-    i7: 84
-    i8: 137
-    i9: 36
-    i10: 109
-    i11: 33
-    i12: 151
-    i13: 38
-    i14: 141
-    i15: 87
+    i0: 248
+    i1: 164
+    i2: 248
+    i3: 105
+    i4: 185
+    i5: 89
+    i6: 34
+    i7: 100
+    i8: 152
+    i9: 20
+    i10: 195
+    i11: 200
+    i12: 21
+    i13: 7
+    i14: 193
+    i15: 13
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
 --- !u!114 &114751988950110704
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
---- !u!114 &114793189097807412
+--- !u!114 &114799345354817080
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1579284462076690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a6b61dafb8d5a34cb0d448e613c06d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 697f51394b41a724c8ae5dec412f145a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5

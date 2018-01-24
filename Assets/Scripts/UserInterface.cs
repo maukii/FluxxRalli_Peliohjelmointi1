@@ -4,48 +4,66 @@ using System.Collections;
 
 public class UserInterface : MonoBehaviour
 {
-
-    public float speed;
-    public Text countText;
+    public bool win = false;
+ 
+    public Text CoincountText;
+    public Text ArtcountText;
+    public Text PositionText;
     public Text winText;
-
-    private Rigidbody rb;
-    private int count;
+    private int Coincount;
+    private int Artcount;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        count = 0;
-        SetCountText();
+
+        Coincount = 0;
+        Artcount = 0;
+        SetCoinCountText();
+        SetArtCountText();
         winText.text = "";
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-
-        rb.AddForce(movement * speed);
+        if(win == true)
+        {
+            Win();
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Pick Up"))
+        if (other.gameObject.CompareTag("Coin"))
         {
-            other.gameObject.SetActive(false);
-            count = count + 1;
-            SetCountText();
+
+            Coincount = Coincount + 1;
+            SetCoinCountText();
+        }
+        if (other.gameObject.CompareTag("Artifact"))
+        {
+
+            Artcount = Artcount + 1;
+            SetArtCountText();
         }
     }
 
-    void SetCountText()
+    void SetCoinCountText()
     {
-        countText.text = "Count: " + count.ToString();
-        if (count >= 12)
-        {
-            winText.text = "You Win!";
-        }
+        CoincountText.text = "Coins: " + Coincount.ToString();
+    }
+    //   if (count >= 12)
+    //   {
+    //       winText.text = "You Win!";
+    //   }
+
+    void SetArtCountText()
+    {
+        ArtcountText.text = "Items: " + Artcount.ToString();
+    }
+
+    void Win()
+    {
+       
+        winText.text = "u win";
     }
 }
