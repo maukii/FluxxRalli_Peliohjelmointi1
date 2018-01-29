@@ -21,7 +21,7 @@ public class PlayerMovement : NetworkBehaviour
 	
 	void Start ()
     {
-		if(isLocalPlayer)
+		if(!isLocalPlayer)
         {
             Destroy(this);
             return;
