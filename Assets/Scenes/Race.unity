@@ -132,47 +132,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 426926824}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21d8c79221188354e950638a52e9deb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 28a75205f9f6c7147a5658f37ecb27ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountX: 10
-  amountZ: 10
-  trackLenght: 5
-  spacingX: 7
-  spacingZ: 7
-  tile:
-  - {fileID: 1220706158677032, guid: f957ab789865bf441906ebee2b882577, type: 2}
-  - {fileID: 1436370669272994, guid: fdfa9a3613a8c074faa94dae55d1b962, type: 2}
-  - {fileID: 1581015762838936, guid: 946d213163a606d449d919a77a8ede4e, type: 2}
-  - {fileID: 1336802101689562, guid: ebc8b91bd6c72424ab522102d2aa87c1, type: 2}
-  - {fileID: 1070992367507694, guid: 02cde496e9458eb4ea5760d15d274a02, type: 2}
-  - {fileID: 1141487200164546, guid: 38d85ccffe635fd4382e1b075a1328ac, type: 2}
-  ST01:
-  - {fileID: 1220706158677032, guid: f957ab789865bf441906ebee2b882577, type: 2}
-  - {fileID: 1581015762838936, guid: 946d213163a606d449d919a77a8ede4e, type: 2}
-  - {fileID: 1336802101689562, guid: ebc8b91bd6c72424ab522102d2aa87c1, type: 2}
-  ST02:
-  - {fileID: 1436370669272994, guid: fdfa9a3613a8c074faa94dae55d1b962, type: 2}
-  - {fileID: 1581015762838936, guid: 946d213163a606d449d919a77a8ede4e, type: 2}
-  - {fileID: 1141487200164546, guid: 38d85ccffe635fd4382e1b075a1328ac, type: 2}
-  CR01:
-  - {fileID: 1220706158677032, guid: f957ab789865bf441906ebee2b882577, type: 2}
-  - {fileID: 1070992367507694, guid: 02cde496e9458eb4ea5760d15d274a02, type: 2}
-  - {fileID: 1141487200164546, guid: 38d85ccffe635fd4382e1b075a1328ac, type: 2}
-  CR02:
-  - {fileID: 1220706158677032, guid: f957ab789865bf441906ebee2b882577, type: 2}
-  - {fileID: 1070992367507694, guid: 02cde496e9458eb4ea5760d15d274a02, type: 2}
-  - {fileID: 1141487200164546, guid: 38d85ccffe635fd4382e1b075a1328ac, type: 2}
-  CR03:
-  - {fileID: 1436370669272994, guid: fdfa9a3613a8c074faa94dae55d1b962, type: 2}
-  - {fileID: 1581015762838936, guid: 946d213163a606d449d919a77a8ede4e, type: 2}
-  - {fileID: 1141487200164546, guid: 38d85ccffe635fd4382e1b075a1328ac, type: 2}
-  CR04:
-  - {fileID: 1436370669272994, guid: fdfa9a3613a8c074faa94dae55d1b962, type: 2}
-  - {fileID: 1336802101689562, guid: ebc8b91bd6c72424ab522102d2aa87c1, type: 2}
-  - {fileID: 1070992367507694, guid: 02cde496e9458eb4ea5760d15d274a02, type: 2}
+  amountX: 0
+  amountZ: 0
+  trackLenght: 0
+  spacingX: 0
+  spacingZ: 0
+  tile: []
+  ST01: []
+  ST02: []
+  CR01: []
+  CR02: []
+  CR03: []
+  CR04: []
   testTile: {fileID: 0}
-  startTile: {fileID: 1516298948902268, guid: 825e6f147244e6743a233c50b4d19a9a, type: 2}
+  startTile: {fileID: 0}
 --- !u!4 &426926826
 Transform:
   m_ObjectHideFlags: 0
