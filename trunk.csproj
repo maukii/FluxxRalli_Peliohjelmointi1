@@ -86,9 +86,10 @@
     <Compile Include="Assets\Scripts\GRNeedCoins.cs" />
     <Compile Include="Assets\Scripts\GRNeedItems.cs" />
     <Compile Include="Assets\Scripts\GRPlacement.cs" />
-    <Compile Include="Assets\Scripts\LevelGeneration.cs" />
+    <Compile Include="Assets\Scripts\LevelGenerator.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ResetButton.cs" />
+    <Compile Include="Assets\Scripts\TrackGenerator.cs" />
     <Compile Include="Assets\Scripts\UserInterface.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

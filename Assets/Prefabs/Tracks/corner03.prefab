@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4284519817185360}
   m_Layer: 0
   m_Name: corner03
-  m_TagString: Untagged
+  m_TagString: CR03
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

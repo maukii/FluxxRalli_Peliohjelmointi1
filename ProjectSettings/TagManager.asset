@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Artifact
   - Coin
+  - straightUp
+  - straightLeft
+  - straightRight
+  - corner01
+  - corner02
+  - corner03-04
   layers:
   - Default
   - TransparentFX
