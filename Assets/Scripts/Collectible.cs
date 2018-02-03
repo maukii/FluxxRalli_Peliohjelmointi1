@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
+    public Animator pickUps;
     public Animation Artifact_Pickup;
     public Animation Coin_Pickup;
     //jos aktivoituu, lisää pelaajan ItemCounteriin yhden itemin.
@@ -12,25 +13,19 @@ public class Collectible : MonoBehaviour
 
         if (other.tag == "Player")
         {
-
-            if (gameObject.tag == "Artifact")
-            {
-                Debug.Log("Artifact collected");
-                Artifact_Pickup.Play();
-                
-              
-            }
-            else
+            if (gameObject.tag == "Coin")
             {
                 Debug.Log("Coin collected");
-              
+                MeshCollider.Destroy(this);
                 Coin_Pickup.Play();
+                StartCoroutine(die());
             }
         }
     }
     
-    public void die()
+    public IEnumerator die()
     {
+        yield return new WaitForSeconds(0.5f);
         Destroy(this.gameObject);
     }
 }
