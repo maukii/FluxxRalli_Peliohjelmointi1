@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9fac23cf361814780adae9ed95999c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
+  movementSpeed: 15
   turnSpeed: 60
   cameraDistance: 10
   cameraHeight: 10

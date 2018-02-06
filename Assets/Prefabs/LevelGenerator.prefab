@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1659674952327192}
+  m_IsPrefabParent: 1
+--- !u!1 &1659674952327192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4605354165987418}
+  - component: {fileID: 114114009828389030}
+  m_Layer: 0
+  m_Name: LevelGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4605354165987418
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1659674952327192}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114114009828389030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1659674952327192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3916559451188a245aeaaa943f2ff005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackLenght: 45
+  spawnPosition: {x: 0, y: 0, z: 0}
+  stU:
+  - {fileID: 1761939825076074, guid: 25b49835fba59fe4996eb1ee1d545d16, type: 2}
+  - {fileID: 1415742227062844, guid: f882d5befea6cb843a9d33c8f7a1ff8e, type: 2}
+  - {fileID: 1661865945201304, guid: 14280cd1fe34a3c4789d1f387a95e1d1, type: 2}
+  stL:
+  - {fileID: 1158299160051040, guid: 5a8cde0776e560c4abd93f147d6f97a2, type: 2}
+  - {fileID: 1520829105104522, guid: cf003bb70a1cce043b3d1171d23cfdbd, type: 2}
+  stR:
+  - {fileID: 1405353417928444, guid: 81baad5f81a8ce44c8413401111ff607, type: 2}
+  - {fileID: 1221121514671826, guid: f5ee8a76e4a4a224b9df99e29be55c3e, type: 2}
+  cr01:
+  - {fileID: 1405353417928444, guid: 81baad5f81a8ce44c8413401111ff607, type: 2}
+  - {fileID: 1221121514671826, guid: f5ee8a76e4a4a224b9df99e29be55c3e, type: 2}
+  cr02:
+  - {fileID: 1158299160051040, guid: 5a8cde0776e560c4abd93f147d6f97a2, type: 2}
+  - {fileID: 1520829105104522, guid: cf003bb70a1cce043b3d1171d23cfdbd, type: 2}
+  cr0304:
+  - {fileID: 1761939825076074, guid: 25b49835fba59fe4996eb1ee1d545d16, type: 2}
+  - {fileID: 1415742227062844, guid: f882d5befea6cb843a9d33c8f7a1ff8e, type: 2}
+  - {fileID: 1661865945201304, guid: 14280cd1fe34a3c4789d1f387a95e1d1, type: 2}
+  startTile: {fileID: 1405353417928444, guid: 81baad5f81a8ce44c8413401111ff607, type: 2}
+  straightUp: {fileID: 1405353417928444, guid: 81baad5f81a8ce44c8413401111ff607, type: 2}
