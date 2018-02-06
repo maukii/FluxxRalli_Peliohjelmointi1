@@ -35,7 +35,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4887569673875646}
-  - component: {fileID: 64421790628638788}
   m_Layer: 0
   m_Name: Corner04
   m_TagString: corner03-04
@@ -53,6 +52,7 @@ GameObject:
   - component: {fileID: 4476363305184056}
   - component: {fileID: 33214502916657248}
   - component: {fileID: 23359779633083820}
+  - component: {fileID: 64600602028790460}
   m_Layer: 0
   m_Name: corner04
   m_TagString: Untagged
@@ -154,12 +154,12 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
---- !u!64 &64421790628638788
+--- !u!64 &64600602028790460
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1520829105104522}
+  m_GameObject: {fileID: 1894111144087050}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -167,4 +167,4 @@ MeshCollider:
   m_Convex: 0
   m_InflateMesh: 0
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 4300000, guid: e8b2ae84ce506e84297e1a2054212155, type: 3}

@@ -38,6 +38,7 @@ public class TrackGenerator : MonoBehaviour
     {
         //Luo starttitilen ja asettaa sen currentTileksi
         GameObject startPoint = Instantiate(startTile, spawnPosition, Quaternion.identity);
+        startPoint.transform.parent = gameObject.transform;
         GameObject currentTile = startPoint;
 
         int i = 0;
@@ -47,6 +48,8 @@ public class TrackGenerator : MonoBehaviour
             if (currentTile == startPoint)
             {
                 GameObject newTile = Instantiate(straightUp, currentTile.transform.GetChild(0).position, straightUp.transform.rotation);
+                newTile.transform.parent = gameObject.transform;
+
                 currentTile = newTile;
             }
 
@@ -55,6 +58,7 @@ public class TrackGenerator : MonoBehaviour
                 var ThisSet = stU;
                 rnd = Random.Range(0, ThisSet.Length);
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
             }
 
@@ -63,6 +67,7 @@ public class TrackGenerator : MonoBehaviour
                 var ThisSet = stL;
                 rnd = Random.Range(0, ThisSet.Length);
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
             }
 
@@ -71,6 +76,7 @@ public class TrackGenerator : MonoBehaviour
                 var ThisSet = stR;
                 rnd = Random.Range(0, ThisSet.Length);
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
             }
 
@@ -79,6 +85,7 @@ public class TrackGenerator : MonoBehaviour
                 var ThisSet = cr01;
                 rnd = Random.Range(0, ThisSet.Length);
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
             }
 
@@ -87,6 +94,7 @@ public class TrackGenerator : MonoBehaviour
                 var ThisSet = cr02;
                 rnd = Random.Range(0, ThisSet.Length);
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
             }
 
@@ -95,6 +103,7 @@ public class TrackGenerator : MonoBehaviour
                 var ThisSet = cr0304;
                 rnd = Random.Range(0, ThisSet.Length);
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
             }
 
