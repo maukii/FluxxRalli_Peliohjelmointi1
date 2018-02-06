@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4490332777353302}
-  - component: {fileID: 64644996651418780}
   m_Layer: 0
   m_Name: Corner01
   m_TagString: corner01
@@ -52,6 +51,7 @@ GameObject:
   - component: {fileID: 4958240849517512}
   - component: {fileID: 33700389690881298}
   - component: {fileID: 23011432172296836}
+  - component: {fileID: 64201214420801396}
   m_Layer: 0
   m_Name: corner01
   m_TagString: Untagged
@@ -113,7 +113,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7ac0d9eb70926914eb2649b540abf442, type: 2}
+  - {fileID: 2100000, guid: 83728e668fdb26f45b1ca1198b4fafda, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -139,12 +139,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1935481745117540}
   m_Mesh: {fileID: 4300000, guid: 914cd565cd8051f40a256321b4127c32, type: 3}
---- !u!64 &64644996651418780
+--- !u!64 &64201214420801396
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1415742227062844}
+  m_GameObject: {fileID: 1935481745117540}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -152,4 +152,4 @@ MeshCollider:
   m_Convex: 0
   m_InflateMesh: 0
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 4300000, guid: 914cd565cd8051f40a256321b4127c32, type: 3}
