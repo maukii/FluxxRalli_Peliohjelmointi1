@@ -248,7 +248,6 @@ GameObject:
   m_Component:
   - component: {fileID: 426926826}
   - component: {fileID: 426926825}
-  - component: {fileID: 426926827}
   m_Layer: 0
   m_Name: FallingLevelGen
   m_TagString: Untagged
@@ -274,8 +273,8 @@ MonoBehaviour:
   - {fileID: 1447174338423332, guid: 3052bdc1de2459f41bfa986129b7b49a, type: 2}
   - {fileID: 1899361847413818, guid: 0a650b671d71b574b84141d812323f80, type: 2}
   stL:
-  - {fileID: 1158299160051040, guid: 5a8cde0776e560c4abd93f147d6f97a2, type: 2}
-  - {fileID: 1520829105104522, guid: cf003bb70a1cce043b3d1171d23cfdbd, type: 2}
+  - {fileID: 1662181288650864, guid: f5f9dff51c2421f42a2cc641a67af58c, type: 2}
+  - {fileID: 1177388167663218, guid: 78747540c5e91cd459c82be8e4b0ca0f, type: 2}
   stR:
   - {fileID: 1822814795936928, guid: 701a38d41a336674bbbb76762fd369af, type: 2}
   - {fileID: 1800795542374934, guid: 995d61550ad52df479bbf79974db36eb, type: 2}
@@ -304,31 +303,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &426926827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 426926824}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28a75205f9f6c7147a5658f37ecb27ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amountX: 0
-  amountZ: 0
-  trackLenght: 0
-  spacingX: 0
-  spacingZ: 0
-  tile: []
-  ST01: []
-  ST02: []
-  CR01: []
-  CR02: []
-  CR03: []
-  CR04: []
-  testTile: {fileID: 0}
-  startTile: {fileID: 0}
 --- !u!1 &653179411
 GameObject:
   m_ObjectHideFlags: 0

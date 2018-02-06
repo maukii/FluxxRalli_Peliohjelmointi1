@@ -43,8 +43,8 @@ public class LevelGeneration : MonoBehaviour {
 
     void Start()
     {
-        //GridGeneration();
-        LinearGeneration();
+        GridGeneration();
+        //LinearGeneration();
     }
 
     // Use this for initialization
