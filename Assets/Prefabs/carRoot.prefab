@@ -244,14 +244,14 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1360789732875188}
   serializedVersion: 2
-  m_Mass: 1000
+  m_Mass: 1500
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 16
-  m_CollisionDetection: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!65 &65711268495173450
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -275,8 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691b39da9f1a3514fac4e9e10fe974e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAngle: 30
-  maxTorque: 900
+  maxAngle: 45
+  maxTorque: 750
   wheelShape: {fileID: 1272578982417940, guid: 242ef8de8f2e90b4fb2cd10fc086aedd, type: 2}
   cameraDistance: 10
   cameraHeight: 10.27
@@ -323,10 +323,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044efa7da0ef2b14b894d62f71c41339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  naturalFrequency: 7
+  naturalFrequency: 10
   dampingRatio: 0.8
-  forceShift: 0.03
-  setSuspensionDistance: 1
+  forceShift: 0.1
+  setSuspensionDistance: 0
 --- !u!114 &114733097433372680
 MonoBehaviour:
   m_ObjectHideFlags: 1
