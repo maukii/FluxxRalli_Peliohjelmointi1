@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class PlayerMovement : NetworkBehaviour
+public class PlayerMovement : MonoBehaviour
 {
 
     //movement
@@ -21,11 +21,12 @@ public class PlayerMovement : NetworkBehaviour
 	
 	void Start ()
     {
-		if(!isLocalPlayer)
-        {
-            Destroy(this);
-            return;
-        }
+
+/*	if(!isLocalPlayer)
+    {
+        Destroy(this);
+        return;
+    }*/
 
         rb = GetComponent<Rigidbody>();
 

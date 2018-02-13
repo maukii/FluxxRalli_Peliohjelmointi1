@@ -15,11 +15,14 @@ public class StartCountdown : MonoBehaviour
 {
     public int timeLeft = 3;
     public Text countdownText;
+    public GameObject Player;
+    PlayerMovement script;
+   
 
-  
     void Start()
     {
         StartCoroutine("CountDown");
+        script = GetComponent<PlayerMovement>();
     }
 
 
@@ -30,6 +33,8 @@ public class StartCountdown : MonoBehaviour
         if (timeLeft == 0)
         {
             countdownText.text = "GO";
+            script.enabled = true;
+            
         }
 
 
@@ -37,8 +42,13 @@ public class StartCountdown : MonoBehaviour
         {
             countdownText.text = ("");
             StopCoroutine("CountDown");
+
         }
+
+
     }
+
+
 
     IEnumerator CountDown()
     {
@@ -50,4 +60,3 @@ public class StartCountdown : MonoBehaviour
     }
 
 }
-
