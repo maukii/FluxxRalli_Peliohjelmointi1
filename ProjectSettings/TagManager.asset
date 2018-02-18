@@ -11,7 +11,11 @@ TagManager:
   - straightRight
   - corner01
   - corner02
-  - corner03-04
+  - CR03
+  - CR04
+  - ST02
+  - corner03
+  - corner04
   layers:
   - Default
   - TransparentFX
