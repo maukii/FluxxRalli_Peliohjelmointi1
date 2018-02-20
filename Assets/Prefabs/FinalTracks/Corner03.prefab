@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4729335552562890}
+  - component: {fileID: 65371480452611156}
   m_Layer: 0
   m_Name: Corner03
   m_TagString: corner03
@@ -55,7 +56,7 @@ GameObject:
   - component: {fileID: 64983651574917970}
   m_Layer: 0
   m_Name: corner03
-  m_TagString: Untagged
+  m_TagString: corner03
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,3 +169,15 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 4cebea10020300247a7327a7bbfa9c77, type: 3}
+--- !u!65 &65371480452611156
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1221121514671826}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8, y: 4, z: 4}
+  m_Center: {x: 0, y: 2, z: 0}

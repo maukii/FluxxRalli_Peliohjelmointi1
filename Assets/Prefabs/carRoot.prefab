@@ -205,7 +205,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -221,14 +220,12 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33591733140764168
 MeshFilter:
@@ -272,14 +269,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1360789732875188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 691b39da9f1a3514fac4e9e10fe974e3, type: 3}
+  m_Script: {fileID: 11500000, guid: c73b84491543be740b6985894add5414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAngle: 45
-  maxTorque: 750
-  wheelShape: {fileID: 1272578982417940, guid: 242ef8de8f2e90b4fb2cd10fc086aedd, type: 2}
-  cameraDistance: 10
-  cameraHeight: 10.27
+  naturalFrequency: 10
+  dampingRatio: 0.8
+  forceShift: 0.03
+  setSuspensionDistance: 1
 --- !u!114 &114234763579741362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -294,22 +290,22 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 216
-    i1: 218
-    i2: 7
-    i3: 242
-    i4: 12
-    i5: 52
-    i6: 247
-    i7: 116
-    i8: 120
-    i9: 5
-    i10: 146
-    i11: 170
-    i12: 42
-    i13: 175
-    i14: 42
-    i15: 244
+    i0: 231
+    i1: 32
+    i2: 231
+    i3: 6
+    i4: 144
+    i5: 234
+    i6: 179
+    i7: 68
+    i8: 59
+    i9: 244
+    i10: 29
+    i11: 39
+    i12: 36
+    i13: 149
+    i14: 175
+    i15: 8
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
 --- !u!114 &114242179531812176
@@ -320,13 +316,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1360789732875188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 044efa7da0ef2b14b894d62f71c41339, type: 3}
+  m_Script: {fileID: 11500000, guid: a71a6e2f2a3439e42b8e14190555b616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  naturalFrequency: 10
-  dampingRatio: 0.8
-  forceShift: 0.1
-  setSuspensionDistance: 0
+  maxAngle: 30
+  maxTorque: 1500
+  wheelShape: {fileID: 1272578982417940, guid: 998f34dc97edce143a6ef572734cb83a, type: 2}
+  cameraDistance: 10
+  cameraHeight: 10
 --- !u!114 &114733097433372680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -344,7 +341,6 @@ MonoBehaviour:
   m_RotationSyncCompression: 0
   m_SyncSpin: 0
   m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1

@@ -27,7 +27,7 @@ public class EndlessTrackGenerator : MonoBehaviour
 
     bool startSpawned = false;
 
-    public GameObject currentTile;
+    GameObject currentTile;
     GameObject startPoint;
 
     int rnd;
@@ -36,11 +36,107 @@ public class EndlessTrackGenerator : MonoBehaviour
 
     void Start()
     {
+        // Tää fiksaa NullReferenceExceptionin ----v
+        stU = new GameObject[] { straightUP, corner01, corner02, };
+        stL = new GameObject[] { straightL, corner04 };
+        stR = new GameObject[] { straightR, corner03, };
 
+        cr01 = new GameObject[] { straightR, corner03 };
+        cr02 = new GameObject[] { straightL, corner04 };
+        cr03 = new GameObject[] { straightUP, corner01, corner02 };
+        cr04 = new GameObject[] { straightUP, corner01, corner02 };
+
+        StartChunk();
     }
-    
-    void OnTriggerEnter(Collider other)
+
+    void StartChunk()
     {
+        //Spawnaa start tilen
+        GameObject startPoint = Instantiate(startTile, spawnPosition, Quaternion.identity);
+        startPoint.transform.parent = gameObject.transform;
+        GameObject currentTile = startPoint;
+
+        //spawnaa suoran tilen startin jatkoksi
+        GameObject startStraight = Instantiate(straightR, currentTile.transform.GetChild(0).position, Quaternion.identity);
+        startStraight.transform.parent = gameObject.transform;
+        currentTile = startStraight;
+
+        for (int i = 0; i < chunkSize; i++)
+        {
+            if (currentTile.tag == "straightUp")
+            {
+                var ThisSet = stU;
+                rnd = Random.Range(0, ThisSet.Length);
+                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                newTile.transform.parent = gameObject.transform;
+                currentTile = newTile;
+            }
+
+            else if (currentTile.tag == "straightLeft")
+            {
+                var ThisSet = stL;
+                rnd = Random.Range(0, ThisSet.Length);
+                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                newTile.transform.parent = gameObject.transform;
+                currentTile = newTile;
+            }
+
+            else if (currentTile.tag == "straightRight")
+            {
+                var ThisSet = stR;
+                rnd = Random.Range(0, ThisSet.Length);
+                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                newTile.transform.parent = gameObject.transform;
+                currentTile = newTile;
+            }
+
+            else if (currentTile.tag == "corner01")
+            {
+                var ThisSet = cr01;
+                rnd = Random.Range(0, ThisSet.Length);
+                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                newTile.transform.parent = gameObject.transform;
+                currentTile = newTile;
+            }
+
+            else if (currentTile.tag == "corner02")
+            {
+                var ThisSet = cr02;
+                rnd = Random.Range(0, ThisSet.Length);
+                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                newTile.transform.parent = gameObject.transform;
+                currentTile = newTile;
+            }
+
+            else if (currentTile.tag == "corner03")
+            {
+                var ThisSet = cr03;
+                rnd = Random.Range(0, ThisSet.Length);
+                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                newTile.transform.parent = gameObject.transform;
+                currentTile = newTile;
+            }
+
+            else if (currentTile.tag == "corner04")
+            {
+                var ThisSet = cr04;
+                rnd = Random.Range(0, ThisSet.Length);
+                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                newTile.transform.parent = gameObject.transform;
+                currentTile = newTile;
+            }
+
+            else
+            {
+                Debug.Log("Something went wrong with the EndlessTrackGenerator: suitable tile not found");     //Debug, joka tulee jos ei löydetä sopivaa tileä (useimmiten johtuu siitä, että tileä ei ole asetettu inspectorissa)
+            }
+        }
+    }
+
+    public void NewChunkOnTrigger()
+    {
+        Debug.Log("New chunk called");
+
         //spawnaa kokonaisen chunkin
         for (int i = 0; i < chunkSize; i++)
         {
@@ -114,185 +210,85 @@ public class EndlessTrackGenerator : MonoBehaviour
         }
     }
 
-    void SingleChunk()
+    void OnTriggerEnter(Collider other)
     {
-        for (int i = 0; i < chunkSize; i++)
+
+        if(other.tag == "Player")
         {
-            if (currentTile.tag == "straightUp")
-            {
-                var ThisSet = stU;
-                rnd = Random.Range(0, ThisSet.Length);
-                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                newTile.transform.parent = gameObject.transform;
-                currentTile = newTile;
-            }
+            Debug.Log("Collision with player");
 
-            else if (currentTile.tag == "straightLeft")
+            //spawnaa kokonaisen chunkin
+            for (int i = 0; i < chunkSize; i++)
             {
-                var ThisSet = stL;
-                rnd = Random.Range(0, ThisSet.Length);
-                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                newTile.transform.parent = gameObject.transform;
-                currentTile = newTile;
-            }
+                if (currentTile.tag == "straightUp")
+                {
+                    var ThisSet = stU;
+                    rnd = Random.Range(0, ThisSet.Length);
+                    GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                    newTile.transform.parent = gameObject.transform;
+                    currentTile = newTile;
+                }
 
-            else if (currentTile.tag == "straightRight")
-            {
-                var ThisSet = stR;
-                rnd = Random.Range(0, ThisSet.Length);
-                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                newTile.transform.parent = gameObject.transform;
-                currentTile = newTile;
-            }
+                else if (currentTile.tag == "straightLeft")
+                {
+                    var ThisSet = stL;
+                    rnd = Random.Range(0, ThisSet.Length);
+                    GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                    newTile.transform.parent = gameObject.transform;
+                    currentTile = newTile;
+                }
 
-            else if (currentTile.tag == "corner01")
-            {
-                var ThisSet = cr01;
-                rnd = Random.Range(0, ThisSet.Length);
-                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                newTile.transform.parent = gameObject.transform;
-                currentTile = newTile;
-            }
+                else if (currentTile.tag == "straightRight")
+                {
+                    var ThisSet = stR;
+                    rnd = Random.Range(0, ThisSet.Length);
+                    GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                    newTile.transform.parent = gameObject.transform;
+                    currentTile = newTile;
+                }
 
-            else if (currentTile.tag == "corner02")
-            {
-                var ThisSet = cr02;
-                rnd = Random.Range(0, ThisSet.Length);
-                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                newTile.transform.parent = gameObject.transform;
-                currentTile = newTile;
-            }
+                else if (currentTile.tag == "corner01")
+                {
+                    var ThisSet = cr01;
+                    rnd = Random.Range(0, ThisSet.Length);
+                    GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                    newTile.transform.parent = gameObject.transform;
+                    currentTile = newTile;
+                }
 
-            else if (currentTile.tag == "corner03")
-            {
-                var ThisSet = cr03;
-                rnd = Random.Range(0, ThisSet.Length);
-                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                newTile.transform.parent = gameObject.transform;
-                currentTile = newTile;
-            }
+                else if (currentTile.tag == "corner02")
+                {
+                    var ThisSet = cr02;
+                    rnd = Random.Range(0, ThisSet.Length);
+                    GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                    newTile.transform.parent = gameObject.transform;
+                    currentTile = newTile;
+                }
 
-            else if (currentTile.tag == "corner04")
-            {
-                var ThisSet = cr04;
-                rnd = Random.Range(0, ThisSet.Length);
-                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                newTile.transform.parent = gameObject.transform;
-                currentTile = newTile;
-            }
+                else if (currentTile.tag == "corner03")
+                {
+                    var ThisSet = cr03;
+                    rnd = Random.Range(0, ThisSet.Length);
+                    GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                    newTile.transform.parent = gameObject.transform;
+                    currentTile = newTile;
+                }
 
-            else
-            {
-                Debug.Log("Something went wrong with the EndlessTrackGenerator: suitable tile not found");     //Debug, joka tulee jos ei löydetä sopivaa tileä (useimmiten johtuu siitä, että tileä ei ole asetettu inspectorissa)
+                else if (currentTile.tag == "corner04")
+                {
+                    var ThisSet = cr04;
+                    rnd = Random.Range(0, ThisSet.Length);
+                    GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
+                    newTile.transform.parent = gameObject.transform;
+                    currentTile = newTile;
+                }
+
+                else
+                {
+                    Debug.Log("Something went wrong with the EndlessTrackGenerator: suitable tile not found");     //Debug, joka tulee jos ei löydetä sopivaa tileä (useimmiten johtuu siitä, että tileä ei ole asetettu inspectorissa)
+                }
             }
         }
-    }
-
-    void newGen()
-    {
-        GameObject[] stU = { straightUP, corner01, corner02, };
-        GameObject[] stL = { straightL, corner04 };
-        GameObject[] stR = { straightR, corner03, };
-
-        GameObject[] cr01 = { straightR, corner03 };
-        GameObject[] cr02 = { straightL, corner04 };
-        GameObject[] cr03 = { straightUP, corner01, corner02 };
-        GameObject[] cr04 = { straightUP, corner01, corner02 };
-
-
-        //Luo starttitilen ja asettaa sen currentTileksi
-        GameObject startPoint = Instantiate(startTile, spawnPosition, Quaternion.identity);
-        startPoint.transform.parent = gameObject.transform;
-        GameObject currentTile = startPoint;
-
-        int i = 0;
-
-        while (i < trackLenght)
-        {
-            if (currentTile == startPoint)
-            {
-                GameObject newTile = Instantiate(straightUP, currentTile.transform.GetChild(0).position, straightUP.transform.rotation);
-                newTile.transform.parent = gameObject.transform;
-
-                currentTile = newTile;
-            }
-
-            else if (currentTile.tag == "straightUp")
-            {
-                var ThisSet = stU;
-                rnd = Random.Range(0, ThisSet.Length);
-                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                newTile.transform.parent = gameObject.transform;
-                currentTile = newTile;
-            }
-
-            else if (currentTile.tag == "straightLeft")
-            {
-                var ThisSet = stL;
-                rnd = Random.Range(0, ThisSet.Length);
-                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                newTile.transform.parent = gameObject.transform;
-                currentTile = newTile;
-            }
-
-            else if (currentTile.tag == "straightRight")
-            {
-                var ThisSet = stR;
-                rnd = Random.Range(0, ThisSet.Length);
-                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                newTile.transform.parent = gameObject.transform;
-                currentTile = newTile;
-            }
-
-            else if (currentTile.tag == "corner01")
-            {
-                var ThisSet = cr01;
-                rnd = Random.Range(0, ThisSet.Length);
-                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                newTile.transform.parent = gameObject.transform;
-                currentTile = newTile;
-            }
-
-            else if (currentTile.tag == "corner02")
-            {
-                var ThisSet = cr02;
-                rnd = Random.Range(0, ThisSet.Length);
-                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                newTile.transform.parent = gameObject.transform;
-                currentTile = newTile;
-            }
-
-            else if (currentTile.tag == "corner03")
-            {
-                var ThisSet = cr03;
-                rnd = Random.Range(0, ThisSet.Length);
-                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                newTile.transform.parent = gameObject.transform;
-                currentTile = newTile;
-            }
-
-            else if (currentTile.tag == "corner04")
-            {
-                var ThisSet = cr04;
-                rnd = Random.Range(0, ThisSet.Length);
-                GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                newTile.transform.parent = gameObject.transform;
-                currentTile = newTile;
-            }
-
-            else
-            {
-                Debug.Log("Something went wrong with the EndlessTrackGenerator: suitable tile not found");     //Debug, joka tulee jos ei löydetä sopivaa tileä (useimmiten johtuu siitä, että tileä ei ole asetettu inspectorissa)
-            }
-
-            i++;
-
-        }
-
-        // spawn maaliviiva
-        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        cube.transform.position = currentTile.transform.GetChild(0).position + new Vector3(0,2,0);
-        Debug.Log("end spawned");
     }
 }
 

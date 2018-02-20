@@ -16,6 +16,7 @@ TagManager:
   - ST02
   - corner03
   - corner04
+  - LevelGenerator
   layers:
   - Default
   - TransparentFX
