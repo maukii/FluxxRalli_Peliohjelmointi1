@@ -32,7 +32,7 @@ public class EndlessTrackGenerator : MonoBehaviour
 
     int rnd;
 
-    Transform playerTransform;
+    public List<GameObject> allTiles = new List<GameObject>();
 
     void Start()
     {
@@ -54,12 +54,14 @@ public class EndlessTrackGenerator : MonoBehaviour
         //Spawnaa start tilen
         GameObject startPoint = Instantiate(startTile, spawnPosition, Quaternion.identity);
         startPoint.transform.parent = gameObject.transform;
-        GameObject currentTile = startPoint;
+        currentTile = startPoint;
+        allTiles.Add(startPoint);
 
         //spawnaa suoran tilen startin jatkoksi
         GameObject startStraight = Instantiate(straightR, currentTile.transform.GetChild(0).position, Quaternion.identity);
         startStraight.transform.parent = gameObject.transform;
         currentTile = startStraight;
+        allTiles.Add(startStraight);
 
         for (int i = 0; i < chunkSize; i++)
         {
@@ -70,6 +72,7 @@ public class EndlessTrackGenerator : MonoBehaviour
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
                 newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
+                allTiles.Add(newTile);
             }
 
             else if (currentTile.tag == "straightLeft")
@@ -79,6 +82,7 @@ public class EndlessTrackGenerator : MonoBehaviour
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
                 newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
+                allTiles.Add(newTile);
             }
 
             else if (currentTile.tag == "straightRight")
@@ -88,6 +92,8 @@ public class EndlessTrackGenerator : MonoBehaviour
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
                 newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
+                allTiles.Add(newTile);
+
             }
 
             else if (currentTile.tag == "corner01")
@@ -97,6 +103,7 @@ public class EndlessTrackGenerator : MonoBehaviour
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
                 newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
+                allTiles.Add(newTile);
             }
 
             else if (currentTile.tag == "corner02")
@@ -106,6 +113,7 @@ public class EndlessTrackGenerator : MonoBehaviour
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
                 newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
+                allTiles.Add(newTile);
             }
 
             else if (currentTile.tag == "corner03")
@@ -115,6 +123,7 @@ public class EndlessTrackGenerator : MonoBehaviour
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
                 newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
+                allTiles.Add(newTile);
             }
 
             else if (currentTile.tag == "corner04")
@@ -124,12 +133,15 @@ public class EndlessTrackGenerator : MonoBehaviour
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
                 newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
+                allTiles.Add(newTile);
             }
 
             else
             {
                 Debug.Log("Something went wrong with the EndlessTrackGenerator: suitable tile not found");     //Debug, joka tulee jos ei löydetä sopivaa tileä (useimmiten johtuu siitä, että tileä ei ole asetettu inspectorissa)
             }
+
+            StartCoroutine(DestroyDelay());
         }
     }
 
@@ -147,6 +159,7 @@ public class EndlessTrackGenerator : MonoBehaviour
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
                 newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
+                allTiles.Add(newTile);
             }
 
             else if (currentTile.tag == "straightLeft")
@@ -156,6 +169,7 @@ public class EndlessTrackGenerator : MonoBehaviour
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
                 newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
+                allTiles.Add(newTile);
             }
 
             else if (currentTile.tag == "straightRight")
@@ -165,6 +179,7 @@ public class EndlessTrackGenerator : MonoBehaviour
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
                 newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
+                allTiles.Add(newTile);
             }
 
             else if (currentTile.tag == "corner01")
@@ -174,6 +189,7 @@ public class EndlessTrackGenerator : MonoBehaviour
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
                 newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
+                allTiles.Add(newTile);
             }
 
             else if (currentTile.tag == "corner02")
@@ -183,6 +199,7 @@ public class EndlessTrackGenerator : MonoBehaviour
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
                 newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
+                allTiles.Add(newTile);
             }
 
             else if (currentTile.tag == "corner03")
@@ -192,6 +209,7 @@ public class EndlessTrackGenerator : MonoBehaviour
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
                 newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
+                allTiles.Add(newTile);
             }
 
             else if (currentTile.tag == "corner04")
@@ -201,94 +219,29 @@ public class EndlessTrackGenerator : MonoBehaviour
                 GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
                 newTile.transform.parent = gameObject.transform;
                 currentTile = newTile;
+                allTiles.Add(newTile);
             }
 
             else
             {
                 Debug.Log("Something went wrong with the EndlessTrackGenerator: suitable tile not found");     //Debug, joka tulee jos ei löydetä sopivaa tileä (useimmiten johtuu siitä, että tileä ei ole asetettu inspectorissa)
             }
+
+            //Lisää viimeiseen track-palaan rigidbodyn = se tippuu, tuhoten tippuvat pelaajat
+            StartCoroutine(DestroyDelay());
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    IEnumerator DestroyDelay()
     {
+        GameObject toBeDestroyed = allTiles[0];
 
-        if(other.tag == "Player")
-        {
-            Debug.Log("Collision with player");
+        yield return new WaitForSeconds(1);
 
-            //spawnaa kokonaisen chunkin
-            for (int i = 0; i < chunkSize; i++)
-            {
-                if (currentTile.tag == "straightUp")
-                {
-                    var ThisSet = stU;
-                    rnd = Random.Range(0, ThisSet.Length);
-                    GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                    newTile.transform.parent = gameObject.transform;
-                    currentTile = newTile;
-                }
+        toBeDestroyed.AddComponent<Rigidbody>();
 
-                else if (currentTile.tag == "straightLeft")
-                {
-                    var ThisSet = stL;
-                    rnd = Random.Range(0, ThisSet.Length);
-                    GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                    newTile.transform.parent = gameObject.transform;
-                    currentTile = newTile;
-                }
+        allTiles.RemoveAt(0);
 
-                else if (currentTile.tag == "straightRight")
-                {
-                    var ThisSet = stR;
-                    rnd = Random.Range(0, ThisSet.Length);
-                    GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                    newTile.transform.parent = gameObject.transform;
-                    currentTile = newTile;
-                }
-
-                else if (currentTile.tag == "corner01")
-                {
-                    var ThisSet = cr01;
-                    rnd = Random.Range(0, ThisSet.Length);
-                    GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                    newTile.transform.parent = gameObject.transform;
-                    currentTile = newTile;
-                }
-
-                else if (currentTile.tag == "corner02")
-                {
-                    var ThisSet = cr02;
-                    rnd = Random.Range(0, ThisSet.Length);
-                    GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                    newTile.transform.parent = gameObject.transform;
-                    currentTile = newTile;
-                }
-
-                else if (currentTile.tag == "corner03")
-                {
-                    var ThisSet = cr03;
-                    rnd = Random.Range(0, ThisSet.Length);
-                    GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                    newTile.transform.parent = gameObject.transform;
-                    currentTile = newTile;
-                }
-
-                else if (currentTile.tag == "corner04")
-                {
-                    var ThisSet = cr04;
-                    rnd = Random.Range(0, ThisSet.Length);
-                    GameObject newTile = Instantiate(ThisSet[rnd], currentTile.transform.GetChild(0).position, ThisSet[0].transform.rotation);
-                    newTile.transform.parent = gameObject.transform;
-                    currentTile = newTile;
-                }
-
-                else
-                {
-                    Debug.Log("Something went wrong with the EndlessTrackGenerator: suitable tile not found");     //Debug, joka tulee jos ei löydetä sopivaa tileä (useimmiten johtuu siitä, että tileä ei ole asetettu inspectorissa)
-                }
-            }
-        }
     }
 }
 
