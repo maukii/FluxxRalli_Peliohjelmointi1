@@ -7,9 +7,11 @@ public class PlayerMovement : MonoBehaviour
 {
 
     //movement
-    public float movementSpeed = 5f;
-    public float turnSpeed = 45f;
-    float notMoving = 0f;
+    public float movementSpeed;
+    public float normalTurnSpeed;
+    public float turnSpeed;
+    float reverseTurning;
+    public bool notMoving;
 
     //camerapos
     public float cameraDistance = 10f;
@@ -22,11 +24,12 @@ public class PlayerMovement : MonoBehaviour
 	void Start ()
     {
 
-/*	if(!isLocalPlayer)
-    {
-        Destroy(this);
-        return;
-    }*/
+        /*	if(!isLocalPlayer)
+            {
+                Destroy(this);
+                return;
+            }*/
+        reverseTurning = -turnSpeed;
 
         rb = GetComponent<Rigidbody>();
 
@@ -53,17 +56,18 @@ public class PlayerMovement : MonoBehaviour
 
         if(moveAmount == 0f) //if player isn't moving he can't turn
         {
-            turnSpeed = notMoving;
+            notMoving = true;
+            turnSpeed = 0f;
         }
 
         if(moveAmount < 0f) //if player goes backwards controls are reversed
         {
-            turnSpeed = -45f;
+            turnSpeed = reverseTurning;
         }
         
         if(moveAmount > 0f)
         {
-            turnSpeed = 45f;
+            turnSpeed = normalTurnSpeed;
         }
 
 

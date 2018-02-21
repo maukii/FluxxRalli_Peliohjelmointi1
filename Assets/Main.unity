@@ -113,6 +113,60 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &248463227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 248463228}
+  - component: {fileID: 248463230}
+  - component: {fileID: 248463229}
+  m_Layer: 0
+  m_Name: KillBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &248463228
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 248463227}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &248463229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 248463227}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f01f8fa077927c4a93c5aca6f55d9cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+--- !u!65 &248463230
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 248463227}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1000, y: 1, z: 1000}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &786598390
 Prefab:
   m_ObjectHideFlags: 0
@@ -352,7 +406,7 @@ Prefab:
         type: 2}
       propertyPath: m_PlayerPrefab
       value: 
-      objectReference: {fileID: 1360789732875188, guid: d8da07f20c34f774780592aa2aaf2af4,
+      objectReference: {fileID: 1579284462076690, guid: f8a4f869b95922649814c3c81507c10d,
         type: 2}
     - target: {fileID: 4158000013968164, guid: 135a7aee6902f6e4cb9f43e2e56c7f79, type: 2}
       propertyPath: m_LocalPosition.x
@@ -377,6 +431,11 @@ Prefab:
     - target: {fileID: 4158000013968164, guid: 135a7aee6902f6e4cb9f43e2e56c7f79, type: 2}
       propertyPath: m_LocalPosition.z
       value: -2.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 114657701310749060, guid: 135a7aee6902f6e4cb9f43e2e56c7f79,
+        type: 2}
+      propertyPath: m_AutoCreatePlayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 135a7aee6902f6e4cb9f43e2e56c7f79, type: 2}

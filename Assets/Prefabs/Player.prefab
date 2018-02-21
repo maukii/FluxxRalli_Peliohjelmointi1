@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33342982965454542}
   - component: {fileID: 65960787982500750}
   - component: {fileID: 114926012905598012}
+  - component: {fileID: 114971942422777228}
   - component: {fileID: 23464208934734854}
   - component: {fileID: 114568345538621814}
   - component: {fileID: 114751988950110704}
@@ -56,6 +57,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -71,6 +73,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -189,6 +192,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 15
-  turnSpeed: 60
+  normalTurnSpeed: 100
+  turnSpeed: 65
+  notMoving: 0
   cameraDistance: 10
   cameraHeight: 10
+--- !u!114 &114971942422777228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1579284462076690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846b0c1b394de1a4c85e67dd438ffa4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
