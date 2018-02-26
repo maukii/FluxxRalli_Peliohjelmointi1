@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : NetworkBehaviour
 {
 
     //movement
@@ -24,11 +24,12 @@ public class PlayerMovement : MonoBehaviour
 	void Start ()
     {
 
-        /*	if(!isLocalPlayer)
+        	if(!isLocalPlayer)
             {
                 Destroy(this);
                 return;
-            }*/
+            }
+
         reverseTurning = -turnSpeed;
 
         rb = GetComponent<Rigidbody>();

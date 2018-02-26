@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
 using UnityStandardAssets.Networking;
@@ -15,3 +15,4 @@ public class PlayerColor_Hook : LobbyHook
     }
 	
 }
+*/
