@@ -125,6 +125,7 @@
     <Compile Include="Assets\Scripts\PlayerColor.cs" />
     <Compile Include="Assets\Scripts\PlayerColor_Hook.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerWin.cs" />
     <Compile Include="Assets\Scripts\ResetButton.cs" />
     <Compile Include="Assets\Scripts\StartCountdown.cs" />
     <Compile Include="Assets\Scripts\TrackCollisionDetector.cs" />
