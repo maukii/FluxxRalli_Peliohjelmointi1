@@ -24,12 +24,34 @@ public class PlayerWin : NetworkBehaviour
         }
     }
 
+    [ClientRpc]
+    void RpcWin()
+    {
+        informationText = GameObject.FindObjectOfType<Text>();
+
+        if (!isLocalPlayer)
+        {
+            informationText.text = "Game Over";
+        }
+        else
+        {
+            informationText.text = "You Win";
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "KillBox")
         {
             RpcDie();
             Invoke("BackToLobby", 3f);
+            return;
+        }
+
+        if(other.gameObject.tag == "Goal")
+        {
+            RpcWin();
+            Invoke("BackToLobby", 1f);
             return;
         }
     }

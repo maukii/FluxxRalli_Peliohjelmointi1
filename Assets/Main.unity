@@ -318,7 +318,20 @@ Prefab:
     - target: {fileID: 114248142849686288, guid: fe00c464060883641bd6a2680d6198d5,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1282249387189712, guid: fe00c464060883641bd6a2680d6198d5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114702478105260100, guid: fe00c464060883641bd6a2680d6198d5,
+        type: 2}
+      propertyPath: m_ServerOnly
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4498892802595192, guid: fe00c464060883641bd6a2680d6198d5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe00c464060883641bd6a2680d6198d5, type: 2}
@@ -334,31 +347,23 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 814883632}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7cacfb38c71f0f488d7f4071a9260e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 8901ad367bfb3c845905533241763a44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountX: 0
-  amountZ: 0
-  trackLenght: 0
-  spacingX: 0
-  spacingZ: 0
-  tile: []
-  straight01: {fileID: 0}
-  straight02: {fileID: 0}
+  straightUP: {fileID: 1761939825076074, guid: 25b49835fba59fe4996eb1ee1d545d16, type: 2}
+  straightL: {fileID: 1158299160051040, guid: 5a8cde0776e560c4abd93f147d6f97a2, type: 2}
+  straightR: {fileID: 1405353417928444, guid: 81baad5f81a8ce44c8413401111ff607, type: 2}
   corner01: {fileID: 1415742227062844, guid: f882d5befea6cb843a9d33c8f7a1ff8e, type: 2}
   corner02: {fileID: 1661865945201304, guid: 14280cd1fe34a3c4789d1f387a95e1d1, type: 2}
   corner03: {fileID: 1221121514671826, guid: f5ee8a76e4a4a224b9df99e29be55c3e, type: 2}
   corner04: {fileID: 1520829105104522, guid: cf003bb70a1cce043b3d1171d23cfdbd, type: 2}
-  spawnPosition: {x: 0, y: 0, z: 0}
-  stU: []
-  stL: []
-  stR: []
-  cr01: []
-  cr02: []
-  cr0304: []
-  startTile: {fileID: 0}
+  startTile: {fileID: 1166911754873488, guid: ff038c7acb34d25469445000b722d329, type: 2}
+  endTile: {fileID: 1042188668016010, guid: 0cb702ec491ec954c98131845e453dcf, type: 2}
+  trackLenght: 0
+  chunkSize: 1
+  allTiles: []
 --- !u!1 &856077721
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,6 +561,12 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114657701310749060, guid: 135a7aee6902f6e4cb9f43e2e56c7f79,
+        type: 2}
+      propertyPath: m_PlayerPrefab
+      value: 
+      objectReference: {fileID: 1992096245642906, guid: 86c7fb45f93b7cb43890b70e04ed40a2,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 135a7aee6902f6e4cb9f43e2e56c7f79, type: 2}
   m_IsPrefabParent: 0

@@ -23,6 +23,7 @@ TagManager:
   - CR02
   - ST01
   - KillBox
+  - Goal
   layers:
   - Default
   - TransparentFX

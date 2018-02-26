@@ -19,7 +19,7 @@ public class FullLevelGenerator : MonoBehaviour
 
     GameObject[] stU, stL, stR, cr01, cr02, cr03, cr04;
 
-    public GameObject straightUP, straightL, straightR, corner01, corner02, corner03, corner04, startTile;
+    public GameObject straightUP, straightL, straightR, corner01, corner02, corner03, corner04, startTile, endTile;
 
     public int trackLenght, chunkSize = 25;
 
@@ -230,9 +230,12 @@ public class FullLevelGenerator : MonoBehaviour
             }
         }
 
-        GameObject endBlock = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        endBlock.transform.position = new Vector3(currentTile.transform.GetChild(0).position.x, currentTile.transform.GetChild(0).position.y + 1, currentTile.transform.GetChild(0).position.z);
-        
+        GameObject endOfTrack = Instantiate(endTile, currentTile.transform.GetChild(0).position, Quaternion.identity);
+        endOfTrack.transform.parent = gameObject.transform;
+
+        //GameObject endBlock = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        //endBlock.transform.position = new Vector3(currentTile.transform.GetChild(0).position.x, currentTile.transform.GetChild(0).position.y + 1, currentTile.transform.GetChild(0).position.z);
+
 
         //StartCoroutine(DestroyDelay());
     }
