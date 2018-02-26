@@ -12,4 +12,9 @@ public class QuitGame : MonoBehaviour {
         Application.Quit();
         Debug.Log("Game is exiting");
     }
+    public void LoadScene(int level)
+    {
+        Application.LoadLevel(level);
+    }
 }
+
