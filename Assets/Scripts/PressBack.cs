@@ -32,7 +32,7 @@ public class PressBack : MonoBehaviour
     {
 
         float step = speed * Time.deltaTime;
-        transform.position = Vector3.Slerp(transform.position, newTarget.position, step);
+        transform.position = Vector3.Lerp(transform.position, newTarget.position, step);
 
     }
 
