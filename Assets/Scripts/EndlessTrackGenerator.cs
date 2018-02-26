@@ -56,14 +56,16 @@ public class EndlessTrackGenerator : MonoBehaviour
         startPoint.transform.parent = gameObject.transform;
         currentTile = startPoint;
         allTiles.Add(startPoint);
+        Debug.Log("Start added");
 
         //spawnaa suoran tilen startin jatkoksi
         GameObject startStraight = Instantiate(straightR, currentTile.transform.GetChild(0).position, Quaternion.identity);
         startStraight.transform.parent = gameObject.transform;
         currentTile = startStraight;
         allTiles.Add(startStraight);
+        Debug.Log("Straight added");
 
-        for (int i = 0; i < chunkSize; i++)
+        for (int i = 0; i < chunkSize + 5; i++)
         {
             if (currentTile.tag == "straightUp")
             {
@@ -140,8 +142,6 @@ public class EndlessTrackGenerator : MonoBehaviour
             {
                 Debug.Log("Something went wrong with the EndlessTrackGenerator: suitable tile not found");     //Debug, joka tulee jos ei löydetä sopivaa tileä (useimmiten johtuu siitä, että tileä ei ole asetettu inspectorissa)
             }
-
-            StartCoroutine(DestroyDelay());
         }
     }
 
@@ -226,10 +226,9 @@ public class EndlessTrackGenerator : MonoBehaviour
             {
                 Debug.Log("Something went wrong with the EndlessTrackGenerator: suitable tile not found");     //Debug, joka tulee jos ei löydetä sopivaa tileä (useimmiten johtuu siitä, että tileä ei ole asetettu inspectorissa)
             }
-
-            //Lisää viimeiseen track-palaan rigidbodyn = se tippuu, tuhoten tippuvat pelaajat
-            StartCoroutine(DestroyDelay());
         }
+
+        StartCoroutine(DestroyDelay());
     }
 
     IEnumerator DestroyDelay()
