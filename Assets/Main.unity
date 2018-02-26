@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -163,13 +163,13 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 87c316b602156405d92e616621658222, type: 3}
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -315,14 +315,50 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1108424558713164, guid: fe00c464060883641bd6a2680d6198d5, type: 2}
-      propertyPath: m_TagString
-      value: KillBox
+    - target: {fileID: 114248142849686288, guid: fe00c464060883641bd6a2680d6198d5,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114170900157126934, guid: fe00c464060883641bd6a2680d6198d5, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe00c464060883641bd6a2680d6198d5, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &814883632 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1156306761686936, guid: fe00c464060883641bd6a2680d6198d5,
+    type: 2}
+  m_PrefabInternal: {fileID: 359338037}
+--- !u!114 &814883633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 814883632}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7cacfb38c71f0f488d7f4071a9260e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amountX: 0
+  amountZ: 0
+  trackLenght: 0
+  spacingX: 0
+  spacingZ: 0
+  tile: []
+  straight01: {fileID: 0}
+  straight02: {fileID: 0}
+  corner01: {fileID: 1415742227062844, guid: f882d5befea6cb843a9d33c8f7a1ff8e, type: 2}
+  corner02: {fileID: 1661865945201304, guid: 14280cd1fe34a3c4789d1f387a95e1d1, type: 2}
+  corner03: {fileID: 1221121514671826, guid: f5ee8a76e4a4a224b9df99e29be55c3e, type: 2}
+  corner04: {fileID: 1520829105104522, guid: cf003bb70a1cce043b3d1171d23cfdbd, type: 2}
+  spawnPosition: {x: 0, y: 0, z: 0}
+  stU: []
+  stL: []
+  stR: []
+  cr01: []
+  cr02: []
+  cr0304: []
+  startTile: {fileID: 0}
 --- !u!1 &856077721
 GameObject:
   m_ObjectHideFlags: 0

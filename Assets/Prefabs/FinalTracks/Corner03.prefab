@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4729335552562890}
   - component: {fileID: 65371480452611156}
+  - component: {fileID: 114387116574158170}
+  - component: {fileID: 114096547526066798}
   m_Layer: 0
   m_Name: Corner03
   m_TagString: corner03
@@ -43,6 +45,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1634928225182754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4416342405421476}
+  m_Layer: 0
+  m_Name: PickUpSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1944133566240842
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,6 +78,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4416342405421476
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1634928225182754}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.987, y: 1.622, z: -11.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4729335552562890}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4729335552562890
 Transform:
   m_ObjectHideFlags: 1
@@ -68,11 +98,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1221121514671826}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.1762857, y: 102.1, z: -151.89804}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4945297413193540}
   - {fileID: 4741977524895864}
+  - {fileID: 4416342405421476}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -181,3 +212,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8, y: 4, z: 8}
   m_Center: {x: 0, y: 2, z: 0}
+--- !u!114 &114096547526066798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1221121514671826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a997b8c465a614eb93c87d277fa5e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPos: {fileID: 4416342405421476}
+  coinPrefab: {fileID: 1767034951168024, guid: 3b7df1c355dcc08439eeda667edf2309, type: 2}
+--- !u!114 &114387116574158170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1221121514671826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 245
+    i1: 238
+    i2: 138
+    i3: 118
+    i4: 228
+    i5: 164
+    i6: 162
+    i7: 36
+    i8: 185
+    i9: 223
+    i10: 153
+    i11: 226
+    i12: 155
+    i13: 229
+    i14: 92
+    i15: 62
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
