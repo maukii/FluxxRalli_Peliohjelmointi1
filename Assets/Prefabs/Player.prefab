@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114751988950110704}
   - component: {fileID: 54761799579255860}
   - component: {fileID: 114233311176606660}
+  - component: {fileID: 114960572138219938}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -195,6 +196,18 @@ MonoBehaviour:
   notMoving: 0
   cameraDistance: 10
   cameraHeight: 10
+--- !u!114 &114960572138219938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1579284462076690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd096fe0e74e694db240912a8447869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goalHit: 0
 --- !u!114 &114971942422777228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -206,4 +219,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846b0c1b394de1a4c85e67dd438ffa4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: {r: 1, g: 0.5514706, b: 0.5514706, a: 0}

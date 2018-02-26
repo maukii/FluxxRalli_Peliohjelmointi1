@@ -17,6 +17,12 @@ TagManager:
   - corner03
   - corner04
   - LevelGenerator
+  - Fire
+  - corner03-04
+  - CR01
+  - CR02
+  - ST01
+  - KillBox
   layers:
   - Default
   - TransparentFX

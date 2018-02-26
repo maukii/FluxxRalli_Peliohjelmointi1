@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class PlayerWin : NetworkBehaviour
 {
-    public Text informationText;
+    Text informationText;
     public bool goalHit;
 
     [ClientRpc]
-    void RpcWin()
+    void RpcDie()
     {
         informationText = GameObject.FindObjectOfType<Text>();
 
@@ -24,11 +24,11 @@ public class PlayerWin : NetworkBehaviour
         }
     }
 
-    private void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if(goalHit == true)
+        if(other.gameObject.tag == "KillBox")
         {
-            RpcWin();
+            RpcDie();
             Invoke("BackToLobby", 3f);
             return;
         }
