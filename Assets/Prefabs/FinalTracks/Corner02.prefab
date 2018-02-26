@@ -53,6 +53,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4236157273139018}
   - component: {fileID: 65442997830665116}
+  - component: {fileID: 114060590721966466}
   m_Layer: 0
   m_Name: Corner02
   m_TagString: corner02
@@ -166,3 +167,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8, y: 4, z: 8}
   m_Center: {x: 0, y: 2, z: 0}
+--- !u!114 &114060590721966466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1661865945201304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 20
+    i1: 40
+    i2: 12
+    i3: 209
+    i4: 254
+    i5: 52
+    i6: 163
+    i7: 196
+    i8: 120
+    i9: 157
+    i10: 31
+    i11: 56
+    i12: 122
+    i13: 149
+    i14: 225
+    i15: 209
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0

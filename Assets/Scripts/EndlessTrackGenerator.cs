@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class EndlessTrackGenerator : MonoBehaviour
+public class EndlessTrackGenerator : NetworkBehaviour
 {
     /*  Track connections, what can be spawned on this block (not the other way around!)
      *  

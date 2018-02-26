@@ -5,6 +5,12 @@ using UnityEngine.Networking;
 
 public class PlayerMovement : NetworkBehaviour
 {
+    public float coins;
+
+    private void OnGUI()
+    {
+        GUI.Label(new Rect(10, 10, 100, 20), "Coins :   " + coins);
+    }
 
     //movement
     public float movementSpeed;
