@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class PlayerWin : NetworkBehaviour
 {
+
+    //  Mauno Kiiskinen
+
     Text informationText;
     public bool goalHit;
 

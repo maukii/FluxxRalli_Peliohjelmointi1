@@ -3,6 +3,9 @@ using UnityEngine.Networking;
 
 public class EnemySpawner : NetworkBehaviour
 {
+    //  Riikka Kilpeläinen
+    //  Reference script for network spawning, not in use. 
+    // From unity tutorials / Multiplayer Networking / Handling Non-Player Objects
 
     public GameObject enemyPrefab;
     public int numberOfEnemies;

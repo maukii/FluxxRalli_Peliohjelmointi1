@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameruleChanger : MonoBehaviour
 {
+    
+    //  Janne Viitala
+
     public Animation Gamerule_Pickup;
     //jos aktivoituu, jokin satunnainen Gamerule muuttuu
     void OnTriggerEnter(Collider other)

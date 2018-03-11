@@ -5,6 +5,7 @@ using UnityStandardAssets.Networking;
 
 public class PlayerColor_Hook : LobbyHook
 {
+    // Mauno Kiiskinen
 
     public override void OnLobbyServerSceneloadedForPlayer(NetworkManager manager, GameObject lobbyPlayer, GameObject gamePlayer)
     {

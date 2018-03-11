@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class CoinCollected : NetworkBehaviour {
 
+    //  Mauno Kiiskinen
+
     public int coins = 0;
 
     private void OnGUI()

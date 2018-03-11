@@ -5,6 +5,9 @@ using UnityEngine.Networking;
 
 public class Collectible : NetworkBehaviour
 {
+
+    //  Janne Viitala
+
     public Animator pickUps;
     public Animation Artifact_Pickup;
     public Animation Coin_Pickup;

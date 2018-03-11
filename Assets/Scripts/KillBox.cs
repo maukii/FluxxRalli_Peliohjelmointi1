@@ -6,6 +6,9 @@ using UnityEngine.Networking;
 
 public class KillBox : NetworkBehaviour
 {
+
+    //  Mauno Kiiskinen
+
     public Text winText;
     //    public Transform player;
 

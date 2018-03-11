@@ -4,6 +4,9 @@ using System.Collections;
 [ExecuteInEditMode()]
 public class CarSuspension : MonoBehaviour
 {
+
+    //  Mauno Kiiskinen
+
     [Range(0, 20)]
     public float naturalFrequency = 10;
 

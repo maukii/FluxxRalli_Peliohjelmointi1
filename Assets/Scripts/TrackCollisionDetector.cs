@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TrackCollisionDetector : MonoBehaviour {
 
+    //  Riikka Kilpeläinen
+
+
     bool TrackCollision;
 	
 	void OnTriggerEnter (Collider other)

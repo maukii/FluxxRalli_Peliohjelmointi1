@@ -5,6 +5,9 @@ using UnityEngine.Networking;
 
 public class PlayerColor : NetworkBehaviour
 {
+
+    //  Mauno Kiiskinen
+
     [SyncVar]
     public Color color; // For choosing player's color
 

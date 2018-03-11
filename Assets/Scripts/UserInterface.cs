@@ -4,6 +4,9 @@ using System.Collections;
 
 public class UserInterface : MonoBehaviour
 {
+
+    //  Mauno Kiiskinen
+
     public bool win = false;
  
     public Text CoincountText;

@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class DropTrackParts : MonoBehaviour {
 
+    //  Riikka Kilpeläinen
+
     private Rigidbody rb;
 
     void Start()

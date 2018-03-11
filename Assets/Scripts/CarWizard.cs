@@ -4,6 +4,9 @@ using System.Collections;
 
 class CarWizard : EditorWindow
 {
+
+    //  Mauno Kiiskinen
+
     private int axlesCount = 2;
     private float mass = 1000;
     private float axleStep = 2;

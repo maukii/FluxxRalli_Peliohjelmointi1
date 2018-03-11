@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class QuitGame : MonoBehaviour {
+
+    //  Janne Viitala
     private void Update()
     {
         

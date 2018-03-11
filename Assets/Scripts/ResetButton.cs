@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ResetButton : MonoBehaviour {
 
+    //  Mauno Kiiskinen
+
 	// Use this for initialization
 	void Start () {
 		

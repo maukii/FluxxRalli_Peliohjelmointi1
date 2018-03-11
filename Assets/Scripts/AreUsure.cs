@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AreUsure : MonoBehaviour
 
+    //  Janne Viitala
 
 {
     public Transform target1;

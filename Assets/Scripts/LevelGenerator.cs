@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour {
 
+    //  Riikka Kilpeläinen
+
     /*
      *
      *  Track connections, what can be spawned on this block (not the other way around!)

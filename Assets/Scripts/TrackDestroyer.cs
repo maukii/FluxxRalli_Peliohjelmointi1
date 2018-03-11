@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TrackDestroyer : MonoBehaviour {
+
     //Riikka's script hands off
+
     IEnumerator DestroyDelay()
     {
         List<GameObject> allTiles = GetComponent<EndlessTrackGenerator>().allTiles;

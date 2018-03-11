@@ -5,6 +5,9 @@ using UnityEngine.Networking;
 
 public class PlayerMovement : NetworkBehaviour
 {
+
+    //  Mauno Kiiskinen
+
     public float coins;
 
     private void OnGUI()

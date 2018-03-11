@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FullLevelGenerator : MonoBehaviour
 {
+
+    // Riikka Kilpeläinen
+
     /*  Track connections, what can be spawned on this block (not the other way around!)
      *  
      *             straightUP   straightL   straightrR  corner01    corner02    corner03    corner04

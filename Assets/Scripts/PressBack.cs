@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PressBack : MonoBehaviour
 
+    // Janne Viitala
 
 {
     public Transform target1;

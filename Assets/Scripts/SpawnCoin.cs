@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpawnCoin : MonoBehaviour {
 
+    //  Mauno Kiiskinen
+
     public Transform coinPos;
     public GameObject coinPrefab;
     int num;
